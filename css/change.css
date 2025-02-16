@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 32px;
+    font-family:'Courier New', Courier, monospace, 'Zen Kaku Gothic New', sans-serif;
+    color:firebrick;
+    background-color: rgb(174, 214, 214);
+    margin: 0;
+}
+
+button{
+    padding: 20px;
+    border-radius: 30px;
+    margin-right:-10px;
+    border: solid 1px #95688e;
+    background-color: rgb(174, 214, 214);
+}
+
+.red{
+    background-color:red;
+}
+.blue{
+    background-color:blue;
+}
+.green{
+    background-color: green;
+}
+.ztmy{
+    color: azure;
+    background-color: rgb(227, 127, 209);
+    & > main{
+        & > .section2{
+            & > .container{
+                & > .row{
+                    & > .col{
+                        background-color: rgb(117, 63, 107);
+                    }
+                }
+            }
+        }
+    }
+}
+.yellow{
+    background-color: rgb(255, 242, 213);
+}
+.Lyney{
+    color:rgb(243, 205, 108);
+    background-image:url(../img/patern/Lyney.webp);
+    background-size: 240px;
+    & > main{
+        & > .section2{
+            & > .container{
+                & > .row{
+                    & > .col{
+                        background-color: #248b9e;
+                    }
+                }
+            }
+        }
+        & > .section4{
+            color: firebrick;
+        }
+    }
+}
+.Lynette{
+    color:rgb(243, 205, 108);
+    background-image:url(../img/patern/Lynette.webp);
+    background-size: 240px;
+    & > main{
+        & > .section2{
+            hr{
+                color: #58b5f3;
+            }
+            & > .container{
+                & > .row{
+                    & > .col{
+                        background-color: #b7376f;
+                    }
+                }
+            }
+        }
+        & > .section4{
+            color: firebrick;
+        }
+    }
+}
+

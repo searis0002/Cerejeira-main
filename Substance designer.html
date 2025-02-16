@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title>Cerejeira</title>
+    <meta charset="utf-8">
+    <meta name="description"content="Cerejeira">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/Substance/Substance.png">
+    <meta name="robots" content="noindex">
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+    <link rel="stylesheet" type="text/css" href="css/Substance.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="hidden"><a href="xs personal.html">-</a></div>
+        <iframe src="header.html" frameborder="0"></iframe>
+    </header>
+
+    <main>
+
+        <section class="section0">
+            <ul>
+                <li class="header-list"><a href="#upbringing">制作物</a></li>
+                <li class="header-list"><a href="#datafile">ノード</a></li>
+                <li class="header-list"><a href="#study">パターン</a></li>
+                <li class="header-list"><a href="#Todo">なにか</a></li>
+            </ul>
+        </section>
+        
+        <section class="section1"><!--画像 一番上-->
+            <div class="container">
+                <p class="heading"></p>
+                <h1>Substance <br>designer</h1>
+                <p class="text"></p>
+            </div>
+            <div class="filter"></div>
+        </section>
+
+        <section class="section2"><!--index-->
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/Substance.webp" alt="Substance designer">
+                        <h2><a href="#node">ノード一覧</a></h2>
+                        <hr>
+                        <p class="text">よく使うノードについてを一覧にしています。</p>
+                    </div>
+                    <div class="col">
+                        <img src="img/Substance.webp" alt="SD">
+                        <h2><a href="#fix">作品</a></h2>
+                        <hr>
+                        <p class="text">自作物を一覧にします。
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img src="img/Substance.webp" alt="SD">
+                        <h2>music note</h2>
+                        <hr>
+                        <p class="text">音楽についてまとめます。主に歌詞をまとめておきたいです。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section3"><!--ノードシート-->
+            <div class="container">
+                <div class="row" id="node">
+                    <div class="col"><!--blend-->
+                        <h2>blend</h2>
+                        <hr>
+                        <div class="inside">
+                            <div class="box"><img src="img/Substance/SD node/blend.webp" alt="blend"></div>
+                            <p> <br><strong>入力</strong>
+                                <br>Foreground  
+                                <br>Background  
+                                <br>opacity 
+                                <br>
+                                <br><strong>出力</strong>
+                                <br>output
+                                <br>
+                                <br><strong>パラメータ</strong>
+                                <br>1 opacity Foreの反映度合い
+                                <br><details>
+                                    <summary>2 blend mode</summary>
+                                    Copy
+                                    <br>Add (linier doge)
+                                    <br>Subtract
+                                    <br>Multiply
+                                    <br>Add sub
+                                    <br>Max lighten
+                                    <br>Min darken
+                                    <br>Switch
+                                    <br>Divide
+                                    <br>Overlay
+                                    <br>Screen
+                                    <br>Soft light
+                                    </details>
+                                <br>3 alpha blending 使わない
+                                <br>4 cropping area 使わない
+                                <br><strong>備考</strong>
+                                <br>カラーならカラー同士のみ、グレースケールならグレースケールのみ。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col"><!--blur HQ-->
+                        <h2>blur HQ grayscale</h2>
+                        <hr>
+                        <div class="inside">
+                            <div class="box"><img src="img/Substance/SD node/blur HQ grayscale.webp" alt="blur HQ grayscale"></div>
+                            <p> <br><strong>入力</strong>
+                                <br> 
+                                <br>grayscale 
+                                <br>
+                                <br>
+                                <br><strong>出力</strong>
+                                <br>output
+                                <br>
+                                <br>
+                                <br><strong>パラメータ</strong>
+                                <br>intensity
+                                <br>quality
+                                <br>
+                                <br>
+                                <br><strong>備考</strong>
+                                <br>intensityは大体0.01～2の間で使う。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col"><!--transform 2D-->
+                        <h2>transform 2D</h2>
+                        <hr>
+                        <div class="inside">
+                            <div class="box"><img src="img/Substance/SD node/transform 2D.webp" alt="transform 2D"></div>
+                            <p> <br><strong>入力</strong>
+                                <br> 
+                                <br>grayscale or color
+                                <br>
+                                <br>
+                                <br><strong>出力</strong>
+                                <br>
+                                <br>output
+                                <br>
+                                <br><strong>パラメータ</strong>
+                                <br>Rotation
+                                <br>Stretch
+                                <br>Offset
+                                <br>
+                                <br><strong>備考</strong>
+                                <br>2D preview から操作することが大半、実数で揃えたいときのみパラメータをいじる。
+                            </p>
+                        </div>
+                    </div>
+                </div> 
+                
+                <div class="row" id="MOZU"><!--MOZU-->
+                    <div classs="col">
+                        <h2>自分の力で何かを変えていこう</h2>
+                        <hr>
+                        <p class="text">なにを書こうか悩んでいます。なにを書こうか悩んでいます。なにを書こうか悩んでいます。なにを書こうか悩んでいます。なにを書こうか悩んでいます。なにを書こうか悩んでいます。なにを書こうか悩んでいます。なにを書こうか悩んでいます。なにを書こうか悩んでいます。</p>
+                    </div>
+                    <div classs="col">
+                        <img src="img/BGmysite.webp" width="100%" alt="picture">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section4"><!--作品-->
+            <div class="container" id="fix">
+                <h2>作品一覧</h2>
+                <div class="BG"><!--池-->
+                    <div class="row">
+                        <h4>lake</h4>
+                        <hr>
+                        <div class="col">
+                            <img src="img/Substance/lovery lake/lake 3D.webp" alt="lake 3D" class="preview">
+                            <img src="img/Substance/lovery lake/lake 2D.webp" alt="lake 2D" class="preview">
+                        </div>
+                        <img src="img/Substance/lovery lake/lake node.webp" alt="lake node">
+                        <p>Nodevember2023/07 lovery lakeを議題として作成しました。
+                        <br>蓮の葉の模様付け、立体感、縁の部分の強調がよく出来たと感じています。
+                        <br>水面の質感も上々、コースティクスをずらすことで、奥行きを微かに感じられる一品です。
+                        <br>その反面、蓮の花の出来が微妙なので改良を検討します。
+                        </p>
+                    </div>
+                </div>
+                <div class="BG"><!--味噌汁-->
+                    <div class="row">
+                        <h4>味噌汁</h4>
+                        <hr>
+                        <div class="col">
+                            <img src="img/Substance/miso soup/miso 3D.webp" alt="lake 3D" class="preview">
+                            <img src="img/Substance/miso soup/miso 2D.webp" alt="lake 2D" class="preview">
+                        </div>
+                        <img src="img/Substance/miso soup/miso node.webp" alt="lake node">
+                        <p>複数の食材をまとめて表現する練習のために作成しました。
+                        <br>パターン分け、必要に応じて可視状態の変更などは問題なく作成できました。
+                        <br>これにより、欲しい具材を見せる、それぞれの食材の形状などのパターンを変えることが可能となっています。
+                        <br>現在は汁の中に入ってることがうまく表現できていないので綺麗に沈んでる表現をできるようにすることが目標です。
+                        </p>
+                        <div class="col">
+                            <img src="img/Substance/miso soup/a.webp" alt="lake 3D" class="preview">
+                            <img src="img/Substance/miso soup/b.webp" alt="lake 2D" class="preview">
+                        </div>
+                    </div>
+                </div>
+                <div class="BG"><!--祭り 舗装路-->
+                    <div class="row">
+                        <h4>地面タイル</h4>
+                        <hr>
+                        <div class="col">
+                            <img src="img/Substance/mathuri road/3D.webp" alt="lake 3D" class="preview">
+                            <img src="img/Substance/mathuri road/2D.webp" alt="lake 2D" class="preview">
+                        </div>
+                        <img src="img/Substance/mathuri road/node.webp" alt="lake node">
+                        <p>グループ制作用テクスチャとして作成しました。
+                        <br>制作物がアニメ調のため、精細に作り込まずかつ情報量が少なすぎない塩梅で作成しました。
+                        <br>劣化している様子と不均一感を表現するためにノーマルマップを作り込みました。
+                        <br>タイリング感が強く出ないように色剥げは抑えめにしています。
+                        </p>
+                        <img src="img/Substance/mathuri road/test.webp" alt="lake node">
+                        <div class="col">
+                            <img src="img/Substance/mathuri road/normal.webp" alt="lake 3D" class="preview">
+                            <img src="img/Substance/mathuri road/height.webp" alt="lake 2D" class="preview">
+                        </div>
+                        <p>normalmap  heightmap</p>
+                    </div>
+                </div>
+                <div class="BG"><!--提灯-->
+                    <div class="row">
+                        <h4>提灯</h4>
+                        <hr>
+                        <div class="col">
+                            <img src="img/Substance/japanese lantern/3D.webp" alt="lake 3D" class="preview">
+                            <img src="img/Substance/japanese lantern/2D.webp" alt="lake 2D" class="preview">
+                        </div>
+                        <img src="img/Substance/japanese lantern/node.webp" alt="lake node">
+                        <p>Nodevember2023/07 lovery lakeを議題として作成しました。
+                        <br>蓮の葉の模様付け、立体感、縁の部分の強調がよく出来たと感じています。
+                        <br>水面の質感も上々、コースティクスをずらすことで、奥行きを微かに感じられる一品です。
+                        <br>その反面、蓮の花の出来が微妙なので改良を検討します。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        mine.Inc.
+    </footer>
+   <!--<script src="script test.js">
+    </script>-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+</body>
+</html>

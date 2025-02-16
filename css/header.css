@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 32px;
+    font-family:'Courier New', Courier, monospace, 'Zen Kaku Gothic New', sans-serif;
+    color:firebrick;
+    background-color: rgb(174, 214, 214);
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: rgb(139, 67, 255);
+}
+header{
+    font-weight: 700;
+    width: 100%;
+    z-index: 3;
+    & > .hidden{
+        font-size: 2px;
+    }
+    & > .container{
+        max-width: 1680px;
+        width: 90vw;
+        margin: 0 auto;
+        & > .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            & > .logo{
+                font-size: 24px;
+            }
+            & > ul{
+                display: flex;
+                list-style: none;
+                & > li{
+                    margin-left: 30px;
+                    font-size: 14px;
+                        letter-spacing: 1px;
+                    & > a{
+                        color: rgb(115, 166, 166);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    header{
+        width: 100%;
+    }
+}
