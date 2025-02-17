@@ -1,0 +1,32 @@
+[
+    {"id": "001","nametag": "unknown",
+     "img": "img/syougasan.webp",
+     "html": "human.html",
+     "namer": "note",
+     "textin": "human"
+    },
+    {"id": "002","nametag": "human",
+     "img": "img/human/ilust/pottsness/icon.webp",
+     "html": "human.html",
+     "namer": "note",
+     "textin": "human"
+    },
+    {"id": "003","nametag": "skill (Substance)",
+     "img": "img/icon/Substance.webp",
+     "html": "Substance.html",
+     "namer": "note",
+     "textin": "skill"
+    },
+    {"id": "004","nametag": "sound",
+     "img": "img/syougasan.webp",
+     "html": "sound.html",
+     "namer": "note",
+     "textin": "sound"
+    },
+    {"id": "005","nametag": "game",
+     "img": "img/syougasan.webp",
+     "html": "game.html",
+     "namer": "note",
+     "textin": "game"
+    }
+]
