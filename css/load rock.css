@@ -1,0 +1,21 @@
+/* 認証前はページ全体を隠す */
+#content {
+    display: none;
+}
+/* 認証前はロック画面を表示 */
+#lock-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-image: url(../img/human/cosplay/shirathuki/anby.webp);*/
+    background-image: url(../img/human/ilust/pottsness/015.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

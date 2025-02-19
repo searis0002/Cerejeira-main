@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+    <meta name="description" content="個人サイト向けのWEB漫画ビューアスクリプトです。見開き表示対応のレスポンシブでスワイプ操作にも対応しているため、スマホからの閲覧にも優しい仕様です。">
+    <!--  OGPここから  -->
+    <meta property="og:site_name" content="G-ra" />
+    <meta property="og:title" content="なんかいい感じのマンガビューア～slick-custom～" />
+    <meta property="og:url" content="https://guardian.bona.jp/st/cv/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:description" content="個人サイト向けのWEB漫画ビューアスクリプトです。レスポンシブでスワイプにも対応。" />
+    <meta property="og:image" content="https://guardian.bona.jp/st/cv/sample_s.jpg" />
+    <meta name="twitter:image" content="https://guardian.bona.jp/st/cv/sample_s.jpg" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kyugen_hatsu" />
+    <!--  OGPここまで  -->
+	<title>なんかいい感じのマンガビューア～slick-custom～</title>
+	<style>
+        @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300&display=swap');
+        *{margin: 0;padding: 0;}
+        body{font-size: 16px;font-family: Verdana, Arial, "メイリオ","ヒラギノ角ゴ Pro W3", "Osaka", "ＭＳ Ｐゴシック", sans-serif;line-height: 1.6;background-color: #f5f6f7;color: #333;}
+        img {border: 0;max-width: 100%;}
+        a:link,a:visited{text-decoration:underline;color: #007bbb;}
+        a:hover,a:active{opacity:0.8;text-decoration: none;}
+        @media (max-width:800px){
+            body{font-size: 14px;}
+        }
+
+        .red{color: #c10000;}
+        .cadetblue{color: #3c7d80;}
+        .gray{color: #888;}
+        .small{font-size: 80%;}
+        .inlineC{text-align: center;}
+        .mt1{margin-top: 1em;}
+
+        .flexwrap_c{display: flex;justify-content: center;align-items: center;}
+
+        .buttonwrap{text-align: center;margin-top: 1em;}
+    	.buttonwrap img{width: 300px;}
+
+        header{background-color: #dddede;box-shadow: 0 0 10px rgba(0,0,0,0.5);min-height: 260px;}
+        h1{text-align: center;font-size: 3em;font-weight: normal;color: cadetblue;font-family: 'M PLUS Rounded 1c', sans-serif;}
+        h1 span{color: orange;}
+
+        h2{color: #687477;text-align: center;margin: 1em 0;}
+        h3{background: linear-gradient(transparent 70%, #a7d6ff 70%);margin-bottom: 1em;}
+        strong{background: linear-gradient(transparent 70%, #ffe88a 70%);color: #545f62;}
+
+        footer{text-align: center;font-size:0.8em;margin-bottom: 2em;}
+
+        #main{max-width: 1000px;margin: 0 auto;}
+        .wrap{margin-bottom: 5em;}
+        .wrap>p{margin-bottom: 1em;}
+        
+        ul.update{list-style: none;height: 200px;overflow-x: auto;padding: 0.5em;box-sizing: border-box;background: #e6e6e6;margin-bottom: 1em;}
+        ul.update p{padding-left: 2em;margin-bottom: 1em;}
+        ul.list{margin-bottom: 1em;padding-left: 1em;}
+
+        .box{padding: 1em;border: 5px solid #88a3a3;border-radius: 15px;background-color: #fff;}
+        .box p:nth-of-type(2){padding-left: 2em;}
+        .box p:nth-of-type(3){padding-left: 4em;}
+        .y_button{font-size: 1.2em;display: inline-block;text-align: center;font-weight: bold;background-color: #ef8000;}
+        .y_button a{display: block;padding: 0.5em 2em;color: #fff;text-decoration: none;transition: .2s;}
+        .y_button a:hover,.y_button .button a:active{background-color: #007bbb;opacity: 1;}
+
+        pre{margin: 1em 0;white-space: -moz-pre-wrap;white-space: -pre-wrap;white-space: -o-pre-wrap;white-space: pre-wrap;background-color: #fff;color: #888;font-weight: bold;padding: 1em 1.5em;;font-size: 0.8em;border-radius: 15px;}
+
+        .faq dt::before{content: "Q";margin-right: 0.2em;font-weight: bold;color: orange;}
+        .faq dt{font-weight: bold;}
+        .faq dd::before{content: "A";margin-right: 0.2em;font-weight: bold;color: cadetblue;}
+        .faq dd{margin-bottom: 3em;}
+        .faq dd:last-child{margin: 0;}
+        
+        @media (max-width:800px){
+            #main{padding: 0 0.5em;}
+        }
+        @media (min-width:801px){
+            .sp_item{display: none;}
+        }
+    </style>
+</head>
+<body>
+    <header class="flexwrap_c">
+        <h1><span>な</span>んかいい<span>感</span>じの<br class="sp_item">マンガビューア<br>
+            ～s<span>l</span>ick-<span>c</span>ustom～</h1>
+    </header>
+    
+    <div id="main">
+        <div class="wrap">
+            <div class="buttonwrap">
+                <a href="https://guardian.bona.jp/st/cv/slick_custom2/sample/index.html"><br><img src="https://guardian.bona.jp/st/cv/sample_s.jpg" alt="サンプル"></a>
+            </div>
+            <h2>なんかいい感じのマンガビューア<br class="sp_item">～slick-custom～とは</h2>
+            <p>「なんかいい感じのマンガビューア～slick-custom～」は、個人サイト向けのWEB漫画ビューアスクリプトです。</p>
+            <p><strong>htmlは1作品につき1ページ</strong>でOK！複数枚の画像を<strong>自動で連番表示</strong>させるので、ページの数だけhtmlを作らずに済みます。<br>
+                PCの大きな画面では見開き表示、スマホの小さな画面では単ページ表示に自動で切り替わる<strong>レスポンシブ仕様</strong>です。<br>
+                <strong>スワイプ操作にも対応</strong>しているので、スマホ対応にお悩みの方にもぴったり！</p>
+            <p class="small gray">☆土台としてjQueryスクリプトの「<a href="https://kenwheeler.github.io/slick/" target="_blank">slick</a>」を使用しています。slick本体とjQuery本体はCDNで外部から読み込んでるので別途ダウンロードは不要です。</p>
+            <p>自分のサイトに設置してブラウザ上で動かせてレスポンシブでスワイプ対応のマンガビューアが欲しすぎて頑張りました！<br>
+            可能な限り最低限の編集で動くようにしています。</p>
+            <p>個人サイトでマンガ公開する方増えるといいな～そしてあわよくばそれをスマホでも見れたらもーっといいな～ということで公開します。<br>
+            どうぞよきWEBマンガライフを！</p>
+            <br>
+            
+            <div>
+                <b>更新履歴：</b>
+                <ul class="update">
+                    <li>
+                        <b>2022/9/11　ver2.1公開</b>
+                        <p>【軽微な修正】<br>
+                            comic.jsに誤作動防止の条件分岐を追加<br>
+                            （ver2.0をご利用の方はcomic.jsのみ上書きしてください）
+                        </p>
+                    </li>
+                    <li>
+                        <b>2021/7/25</b>
+                        <p>応用Q&A追記</p>
+                    </li>
+                    <li>
+                        <b>2021/1/31　ver2.0公開</b>
+                        <p>
+                            【新機能】<br>
+                            ・左右開始ページの切り替えをhtml内で設定可能へ<br>
+                            ・ボタン追加用のテンプレート追加<br>
+                            ・URLでパラメータ渡してページ指定アクセス可能へ<br>
+                            ・拡大モードの実装<br>
+                            【変更】<br>
+                            ・html内の入力項目をより簡易的に変更<br>
+                            ・画像を上下中央揃えになるよう変更<br>
+                            ・PC版メニュー表示をホバーからクリックに変更<br>
+                            ・最終ページの改造可能ゾーンを明確化<br>
+                            ・フォントアイコンをオリジナルに差し替え<br>
+                            ・メニューから「最初から読む」ボタン削除（最終ページのみ設置）<br>
+                            ・見開き→単ページへの切り替えタイミング幅を767px以下から768px以下へ変更<br>
+                            【修正】<br>
+                            ・ラストページのh1で、記号を含む場合表示がおかしくなる現象を修正<br>
+                            ・ページャーのカウントとラインの間が詰まっているのを修正<br>
+                            ・メニュー操作時に下にリンクがあると、貫通して反応してしまうのを修正<br>
+                            ・IEの時は全画面ボタン非表示（動作しないため）<br>
+                            ・chromeでの画像にじみを軽減<br>
+                            ・ipad版safariだとPC用UIになるのを修正
+                        </p>
+                    </li>
+                    <li><b>2019/8/13　ver1.3公開</b><p>・ブラウザ間でのデザイン統一</p></li>
+                    <li><b>2019/6/26　ver1.2公開</b><p>・ローディング画像load.gif追加</p></li>
+                    <li><b>2019/5/25　ver1.1公開</b><p>・スマホ閲覧時、操作ヘルプの×ボタンが反応しないバグ修正</p></li>
+                    <li><b>2019/5/23　ver1.0公開</b></li>
+                </ul>
+            </div>
+            <p class="small">動作確認：【PC（Windows10）】chrome/firefox/IE11/Edge　【iPad】Safari/chrome　【Android】chrome</p>
+            <p class="small">
+                既知の現象（ver2.1現在）：<br>
+                ・Android版chromeで拡大モード時、ブラウザの「ユーザー補助機能＞強制的にズームを有効にする」にチェックが入っている場合、「拡大モードを解除」バーが上部にfixedしない<br>
+                ・iOS版Chromeでのダブルタップ判定がシビア（ほぼ2本指タップで認識）
+            </p>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="個人サイト向けのレスポンシブなweb漫画ビューア" data-url="https://guardian.bona.jp/st/cv/" data-hashtags="なんかいい感じのマンガビューア" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="wrap">
+            <h3>ファイル構成</h3>
+            <div class="box">
+                <p>
+                    初めに.html　(使い方などの解説/アップロード不要)<br>
+                    「slick_custom_ver2.0」フォルダ　(名前変更推奨というか必要なのは中身だけ)
+                </p>
+                <p>
+                    ∟comi_style.css　(<span class="red">名前変更不可・移動不可</span>)<br>
+                    ∟comic.js　(<span class="red">名前変更不可・移動不可</span>)<br>
+                    ∟「images」フォルダ　(<span class="red">名前変更不可・移動不可</span>)　フォルダ内の画像を差し替える場合は同名で上書きしてください<br>
+                    ∟<b>「comic」フォルダ　(名前変更OK)　作品の数だけコピーして使う</b><br>
+                </p>
+                <p>
+                    ∟<b>連番の画像ファイル　(1～開始で任意の数を用意)　サンプルの4枚は削除してください</b><br>
+                    ∟<b>index.html　(名前変更OK)　主に編集する奴</b>
+                </p>  
+            </div>
+        </div>
+        
+        <div class="wrap">
+            <h3>使い方</h3>
+            <p>1)「comic」フォルダにファイル名を連番にした漫画画像を入れます。</p>
+            <p>2)index.htmlをテキストエディターで開きます。</p>
+            <p>3)14～19行目を編集します。</p>
+            <p class="cadetblue">例…URL「http://ほにゃらら/index.html」のサイトで「太郎」が公開している「32」ページの「png」形式の画像の「左ページ始まり」の「名無しの権兵衛の冒険」という作品の場合</p>
+<pre><code>var page = 32; //ページ数
+var imgtype = "png"; //画像の拡張子
+var title = "名無しの権兵衛の冒険"; //タイトル名
+var site = "http://ほにゃらら/index.html"; //サイトのURL
+var copy = "太郎"; //作者名
+var display = 0; //左ページ始まりは「0」、右ページ始まりは「1」
+</code></pre>
+            <p>4)アップロードして完成！</p>
+        </div>
+
+        <div class="wrap">
+            <h3>応用</h3>
+            <dl class="faq">
+                <dt>タイトルが長すぎて、スマホで見た時変なとこで改行されちゃう……任意の場所で改行したい。</dt>
+                <dd>
+                    index.htmlの31行目を使いましょう！<br>
+<pre><code>//$("h1").html("サンプル&lt;br&gt;テキスト");
+</code></pre>
+                    行頭の「//」を削除し、「サンプル&lt;br&gt;テキスト」のところを書き換えてください。<br>
+                </dd>
+                
+                <dt>ページを指定してリンクを貼りたい。</dt>
+                <dd>
+                    連載作品では、最新更新ページへのリンクを貼ることも多いかと思います。<br>
+                    リンクする際、URLの末尾に「?p=任意の数字」を入れることで、アクセスした際に最初に表示するページを指定することができます。<br>
+                    <br>
+                    <span class="cadetblue">例：サンプル漫画の5P目にリンク</span><br>
+                    <a style="word-wrap: break-word;" href="https://guardian.bona.jp/st/cv/slick_custom2/sample/index.html?p=5" target="_blank">https://guardian.bona.jp/st/cv/slick_custom2/sample/index.html?p=5</a>
+                </dd>
+                
+                <dt>最後のページにweb拍手や告知等のコンテンツを追加したい。</dt>
+                <dd>
+                    index.htmlの<br>
+                    &lt;!--フリー追加ゾーンここから--&gt; ～ &lt;!--フリー追加ゾーンここまで--&gt;<br>
+                    の間に収まるようにコンテンツを追加してください！
+                </dd>
+                
+                <dt>メニューや最後のページにリンクボタンを追加したい。</dt>
+                <dd>
+                    よく使うと思われる次の話・前の話リンクボタンのテンプレをindex.html内にコメントアウトで作成済みです。<br>
+                    「ボタンを追加する場合は以下をコメントアウト解除して編集」の部分を指示通りコメントアウト解除して編集してご利用ください！
+                </dd>
+                
+                <dt>最初に表示されるガイドを非表示にしたい。</dt>
+                <dd>
+                    index.htmlの<br>
+                    &lt;!--初期表示ガイドここから--&gt; ～ &lt;!--初期表示ガイドここまで--&gt;<br>
+                    をまるっと削除してください！
+                </dd>
+                <dt>最初に表示されるガイドの内容を変更したい。</dt>
+                <dd>
+                    index.htmlの<br>
+                    &lt;!--ガイド内容ここから--&gt; ～ &lt;!--ガイド内容ここまで--&gt;<br>
+                    を編集してください！<br>
+                    ガイドは数秒後に自動でフェードアウトする設定になっていますが、注意事項などの必ず読んでほしい内容を記載する場合はcomic.jsの119行目<br>
+<pre><code>$(this).delay(5000).fadeOut("fast");
+</code></pre>
+                    を削除すると、クリック操作を行うまで表示し続けるようになります。
+                </dd>
+                
+                <dt>画像の読み込み方法を変更したい。</dt>
+                <dd>
+                    デフォルトではページを開いた時に全ての画像が読み込まれます。<br>
+                    これを一枚ずつ読み込み(次のページに移動した時に読み込み)に変更できます。<br>
+                    comic.jsの60行目(スマホ表示版)と、76行目(PC表示版)を編集しましょう！<br>
+                    progressiveとなっているところを、ondemandに変更してください。<br>
+<pre><code>lazyLoad: 'ondemand',
+</code></pre>
+                    詳しくはslickのオプションを参考にどうぞ！<br>
+                    <a href="https://tr.you84815.space/slick/" target="_blank">slickドキュメント翻訳</a>
+                </dd>
+                
+                <dt>画像の大きさってどれくらいがいいの？</dt>
+                <dd>
+                    昨今はモニタも高解像度化が進んでいるので、私は現在のところ長辺1500Pxくらいにしてます。一番でかいiPadで見てもぼやけない！<br>
+                    ファイルサイズは減色して平均300～400KBくらいです。良い減色ソフトがあれば教えてほしい！<br>
+                    私はpng派ですが、グラデーション多めの作風の方ならjpgの方がいいかもです。
+                </dd>
+                
+                <dt>左綴じの内容のため、左→右へページ送りするようにしたい。</dt>
+                <dd>
+                    カスタマイズすれば可能です。以下の編集を行ってください！<br><br>
+                    【1.画像表示を左→右へ変更】<br>
+                    まずcomic.jsの62行目及び78行目の「rtl:true,」を削除します。<br>
+                    次にcomicフォルダ内のindex.htmlの38行目&lt;div class="slider" dir="rtl"&gt;から「dir="rtl"」を削除してください。<br>
+                    <br>
+                    【2.両端クリックでのページ送り操作を入れ替え】<br>
+                    デフォルトでは左端クリックでページが進むようになっているため、この配置を入れ替えます。<br>
+                    comi_style.cssの141行目～156行目を以下のものに書き換えてください。<br>
+<pre><code>.next-arrow{
+    text-align: right;
+    padding-right: 30px;
+    right: 0;
+}
+.next-arrow span::before{
+    content: '\e903';
+}
+.prev-arrow{
+    text-align: left;
+    padding-left: 30px;
+    left: 0;
+}
+.prev-arrow span::before{
+    content: '\e902';
+} 
+</code></pre>
+                    <br>
+                    【3.ページャーを左→右へ変更】<br>
+                    デフォルトではmenuのページャーは右→左へ動くようになっているので、これを変更します。<br>
+                    comi_style.cssの84行目～93行目を以下のものに書き換えてください。<br>
+<pre><code>.slick-dots{
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 98%;
+    height: 14px;
+    border-radius: 25px;
+    overflow: hidden;
+}
+</code></pre>
+                    <br>
+                    【4.キーボード操作のキーを変更】<br>
+                    デフォルトでは←キーでページ送り、→キーで前のページに移動します。これを入れ替えます。<br>
+                    comic.jsの141行目～152行目「キーボード操作」の内容を以下のように書き換えてください。<br>
+<pre><code>$(document).keydown(function(e) {
+    if(e.keyCode === 37){//右　次のページ
+        $slider.slick('slickPrev');
+    }else if(e.keyCode === 39){//左　前のページ
+        $slider.slick('slickNext');
+    }else if(e.keyCode === 40){//下　メニュー表示
+        $(".menu_show").slideToggle(300);
+    }else if(e.keyCode === 38){//上　拡大モード
+        zoomSetting();
+    }
+});
+</code></pre>
+                    またcomicフォルダ内index.htmlの112行目～113行目を以下のように書き換えてください。<br>
+<pre><code>&lt;li&gt;→キー……次のページ&lt;/li&gt;
+&lt;li&gt;←キー……前のページ&lt;/li&gt;
+</code></pre>
+                    以上でページ送りが左→右になります。
+                </dd>
+
+                <dt>slick本体とjQuery本体が外部から読み込みってことは、読み込めなくなったら動かなくなるの？（2021/7/25追記）</dt>
+                <dd>
+                    はい、そうです。slick及びjQueryの公式側でCDN配信を停止した場合は動かなくなります。<br>
+                    またCDNのサービス自体がいつか終了することもあるかもしれません。WEB界隈の移り変わりは激しいので……。<br>
+                    <br>
+                    などと不安を煽ってしまいましたが、解決策はございます。<br>
+                    設置の簡易さを優先して外部読み込みを採用していますが、各スクリプトは公式サイトからダウンロードすることも可能ですので気になる方は別途ダウンロードしてご利用ください！<br>
+                    <br>
+                    ・jQuery <a href="https://jquery.com/" target="_blank">公式サイト</a><br>
+                    なんかいい感じのマンガビューアver2.0での使用バージョンは3.4.1ですが、最新の3.6.0でも動作は確認済みです。<br>
+                    TOPのデカい「Download jQuery」ボタンを押した後、「Download the compressed, production jQuery 3.6.0」を右クリックで保存してください。<br>
+                    その後index.htmlの10行目を編集してダウンロードしたものに差し替えてください。<br>
+                    <br>
+                    ・slick <a href="http://kenwheeler.github.io/slick/" target="_blank">公式サイト</a><br>
+                    なんかいい感じのマンガビューアver2.0での使用バージョンは1.9.0ですが、1.8.1でも動作は確認済みです。<br>
+                    「Download Now」ボタンからダウンロードしてください。使うのは「slick」フォルダ内の「slick.css」「slick.min.js」の2つです。<br>
+                    index.htmlの7行目に「slick.css」、143行目に「slick.min.js」を、それぞれ編集してダウンロードしたものに差し替えてください。
+                </dd>
+                
+            </dl>
+        </div>
+        
+        <div class="wrap">
+            <h3>作る際に参考にさせていただいたページ</h3>
+            <ul class="list">
+                <li><a href="https://tr.you84815.space/slick/" target="_blank">slickドキュメント翻訳</a></li>
+                <li><a href="https://www.genius-web.co.jp/blog/cat-101/customization-method-of-slick.html" target="_blank">slick.jsを使用したスライダをスマホでは適用させてPCでは静止画表示にする方法</a></li>
+                <li><a href="https://pgmemo.tokyo/data/archives/846.html" target="_blank">JavaScript(jQuery)でスマートフォン（iPhone, iPad, Android）を判別する</a></li>
+                <li><a href="http://invalid-log.blogspot.com/2016/02/blog-post_9.html" target="_blank">ベンダープレフィックスなしで、フルスクリーン表示</a></li>
+                <li><a href="https://www.qam-web.com/?p=15115" target="_blank">【解説】iPad OSのユーザーエージェントに「iPad」が含まれない理由</a></li>
+                <li><a href="https://lab.syncer.jp/Web/JavaScript/Snippet/13/" target="_blank">ダブルタップのイベントを設定する方法</a></li>
+                <li><a href="https://designsupply-web.com/knowledgeside/2647/" target="_blank">jQueryで特定の要素以外をクリックした時に操作させる方法</a></li>
+            </ul>
+            <p>お世話になりました！！！</p>
+        </div>
+
+        <div class="wrap">
+            <h3>ライセンスについて</h3>
+            <p>土台として使用しているスクリプト、「<a href="http://kenwheeler.github.io/slick/" target="_blank">slick</a>」はMITライセンスで公開されています。<br>
+            MITライセンスに関しては、<a href="https://wisdommingle.com/mit-license/" target="_blank">こちらのページ</a>が分かりやすくまとめられています。<br>
+            「なんかいい感じのマンガビューア～slick-custom～」は、slickを使用したhtmlページをWEBマンガビューアらしく表示させるためのスクリプトです。こちらもMITライセンスでの公開としています。ソースコード内の著作権表示とライセンス表記を削除しなければ、ご自由にお使いいただけます。<br>
+            どうぞご活用ください。</p>
+        </div>
+        
+    </div>
+
+    <footer>
+        ＼customした人のサイト／<br>
+        <a href="https://guardian.bona.jp/"><img src="https://guardian.bona.jp/bana.jpg" alt="G-ra"></a>
+    </footer>
+</body>
+</html>

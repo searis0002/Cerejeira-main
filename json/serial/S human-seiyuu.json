@@ -1,0 +1,30 @@
+[
+    { "id":"VA-001",  "usertag":"うえしゃま",
+      "img":"img/human/voiceactor/ueda_reina/icon.webp",
+      "html":"VA 001.html",
+      "namer":"上田麗奈",
+      "textin":"<a href=\"https://www.81produce.co.jp/actor_search/index.php/item?cell003=%E3%81%82%E8%A1%8C&cell029=%E5%A5%B3%E6%80%A7&keyword=&cell028=&page=2&cell004=&name=%E4%B8%8A%E7%94%B0%E3%80%80%E9%BA%97%E5%A5%88&id=162&label=1\">Official</a>",
+      "xlink":"ReinaUeda_Staff"
+    },  
+    { "id":"VA-002",  "usertag":"ちゃんまも",
+      "img":"img/human/voiceactor/miyano_mamoru/icon.webp",
+      "html":"VA 002.html",
+      "namer":"宮野真守",
+      "textin":"Official",
+      "xlink":"miyanomamoru_PR"
+    },
+    { "id":"VA-003",  "usertag":"つだけんさん",
+      "img":"img/human/voiceactor/tuda_kenjiro/icon.webp",
+      "html":"VA 003.html",
+      "namer":"津田健次郎",
+      "textin":"Official",
+      "xlink":"tsuda_ken"
+    },
+    { "id":"VA-004",  "usertag":"うめちゃん",
+      "img":"img/human/voiceactor/umehara_yuichiro/icon.webp",
+      "html":"VA 004.html",
+      "namer":"梅原裕一郎",
+      "textin":"Official",
+      "xlink":"UmeuMeumE_Y"
+    }
+]
