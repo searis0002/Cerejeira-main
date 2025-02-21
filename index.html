@@ -22,19 +22,23 @@
 </head>
 
 <body id="BGcolor">
-    <div id="lock-screen">
-        <h2>パスワードを入力してください</h2>
-        <input type="password" id="password" placeholder="パスワードを入力">
-        <button onclick="checkPassword()">認証</button>
-    </div>
+<div id="lock-screen">
+    <h2>パスワードを入力してください</h2>
+    <input type="password" id="password" placeholder="パスワードを入力">
+    <button onclick="checkPassword()">認証</button>
+</div>
+<div id="protected-content" style="display: none;"></div>
 <div id="content">
-<header>
-    <div id="header"></div>
-</header>
+    <header>
+        <div id="header"></div>
+    </header>
 
 <main>
     <section class="section1"><!--top page-->
-            <img src="img/Cerejeira/Cerejeira.webp" alt="sakura">
+        <img src="img/human/ilust/pottsness/015.webp" alt="top" id="image">
+        <!--img/Cerejeira/Cerejeira.webp-->
+        <!--img/human/ilust/pottsness/015.webp-->
+        <!--img/Lyney&Lynette/Lyney&Lynette 002.webp-->
             <div class="container">
                 <p class="heading">Personal site</p>
                 <h1>Ehlaroohe<br>～✿StoriA✿～</h1>
@@ -46,13 +50,11 @@
     
     <section class="section0"><!--色変えボタン-->
         <button type="button" onclick="changecolor('reset')" class="reset"></button>
-        <button type="button" onclick="changecolorZ('ztmy')" class="ztmy"></button>
-        <button type="button" onclick="changecolorY('yellow')" class="yellow"></button>
-        <button type="button" onclick="changecolorLyney('Lyney')" class="Lyney"></button>
-        <button type="button" onclick="changecolorLynette('Lynette')" class="Lynette"></button>
+        <button type="button" onclick="changecolor('ztmy')" class="ztmy"></button>
+        <button type="button" onclick="changecolor('yellow')" class="yellow"></button>
+        <button type="button" onclick="changecolor('Lyney')" class="Lyney"></button>
+        <button type="button" onclick="changecolor('Lynette')" class="Lynette"></button>
     </section>
-
-    <div id="protected-content" style="display: none;"></div>
 
     <section class="section2">
         <div class="container">
@@ -66,7 +68,6 @@
             </div>
         </div>
     </section>
-
     <section class="section3"><!--topic-->
         <div class="container">
             <h1>主題（見出し）</h1>
@@ -93,7 +94,6 @@
             </div>
         </div>
     </section>
-
     <section class="section4"><!--news-->
         <div class="container" id="news">
             <h2>NEWS</h2>
@@ -126,6 +126,7 @@
     </footer>
     
     <script src="js/password.js" defer></script>
+    <script src="js/img size checker.js" defer></script>
     <script src="js/change.js"></script>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/jquery-write.js"></script>
