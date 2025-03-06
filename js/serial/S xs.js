@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { path: 'json/serial/S xs-guraburu.json', prefix: 'guraburu-', limit: 29 },
         { path: 'json/serial/S xs-pokemon.json', prefix: 'pokemon-', limit: 41 },
         { path: 'json/serial/S xs-azuren.json', prefix: 'azuren-', limit: 18 },
-        { path: 'json/serial/S xs-buruaka.json', prefix: 'buruaka-', limit: 18 },
+        { path: 'json/serial/S xs-buruaka.json', prefix: 'buruaka-', limit: 38 },
     ]);
 });
 

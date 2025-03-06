@@ -1,0 +1,26 @@
+[
+ { "chara": "リネ", "id":"Lyney",
+    "rarity": 5,
+    "weapon": "弓",
+    "element": "炎",
+    "splashart": "img/game/genshin/chara/fire/Lyney/splash.webp",
+    "info": "フォンテーヌ廷の名高い魔術師",
+    "birth": "2月2日",
+    "Constellation": "黒斑猫座",
+    "cv": "下野紘",
+    "releaseVersion": "ver4.0",
+    "releaseDate": "2023/8/16"
+ },
+ { "chara": "リネット", "id":"Lynette",
+   "rarity": 4,
+   "weapon": "片手剣",
+   "element": "風",
+   "splashart": "img/game/genshin/chara/wind/Lynette/splash.webp",
+   "info": "綺影で魅せるエレガンス",
+   "birth": "2月2日",
+   "Constellation": "白尾猫座",
+   "cv": "篠原侑",
+   "releaseVersion": "ver4.0",
+   "releaseDate": "2023/8/16"
+}
+]

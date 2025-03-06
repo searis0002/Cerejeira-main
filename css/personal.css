@@ -424,7 +424,7 @@ a {
     }
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1080px){
     .section1{
         font-size: 27px;
     }

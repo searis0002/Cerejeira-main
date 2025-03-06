@@ -9,15 +9,11 @@ body{
     background-color: rgb(174, 214, 214);
     margin: 0;
 }
-a {
+a{
     text-decoration: none;
     color: rgb(139, 67, 255);
 }
-.blank{
-    margin: 100px;
-}
-
-.swiper {
+.swiper{
     width: 800px;
     height: 320px;
     max-width: 100%;

@@ -23,10 +23,10 @@
      "namer": "note",
      "textin": "sound"
     },
-    {"id": "005","nametag": "game",
+    {"id": "005","nametag": "娯楽",
      "img": "img/syougasan.webp",
-     "html": "game.html",
+     "html": "entertainment.html",
      "namer": "note",
-     "textin": "game"
+     "textin": "娯楽"
     }
 ]
