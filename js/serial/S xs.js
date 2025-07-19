@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { path: 'json/serial/S xs-azuren.json', prefix: 'azuren-', limit: 18 },
         { path: 'json/serial/S xs-buruaka.json', prefix: 'buruaka-', limit: 52 },
         { path: 'json/serial/S xs-fate.json', prefix: 'FGO-', limit: 61 },
+        { path: 'json/serial/S xs-genshin.json', prefix: 'genshin-', limit: 16 },
     ]);
 });
 
