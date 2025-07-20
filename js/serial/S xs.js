@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { path: 'json/serial/S xs-genshin.json', prefix: 'genshin-', limit: 16 },
         { path: 'json/serial/S xs-DQ.json', prefix: 'DQ-', limit: 6 },
         { path: 'json/serial/S xs-ToLove.json', prefix: 'ToLove-', limit: 4 },
+        { path: 'json/serial/S xs-east.json', prefix: 'east-', limit: 4 },
+        { path: 'json/serial/S xs-love.json', prefix: 'love-', limit: 49 },
     ]);
 });
 
