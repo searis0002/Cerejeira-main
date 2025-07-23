@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { path: 'json/serial/S xs-ToLove.json', prefix: 'ToLove-', limit: 4 },
         { path: 'json/serial/S xs-east.json', prefix: 'east-', limit: 4 },
         { path: 'json/serial/S xs-love.json', prefix: 'love-', limit: 49 },
+        { path: 'json/serial/S xs-series.json', prefix: 'series-', limit: 66 },
     ]);
 });
 
