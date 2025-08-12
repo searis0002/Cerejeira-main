@@ -118,8 +118,28 @@ ul,li {
 }
 
 
-
-
+#loading-screen {
+  position: fixed;
+  inset: 0;
+  top: 0;
+  background-color: rgba(255,255,255,0.8);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1.6s ease; /* フェード用 */
+}
+#loading-screen img {
+  max-width: 100%; /* 任意の最大幅 */
+  width: 100%;      /* コンテナ幅以内で縮小 */
+  height: auto;
+  display: block;
+}
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none; /* フェード後にクリック無効 */
+}
 
 /* 検索バー */
 #searchInput {
@@ -270,8 +290,19 @@ ul,li {
 }
 
 .accordion-toggle:active {
-  background: linear-gradient(145deg, #c8ebff, #e0f8ff);
+  background: linear-gradient(145deg, #fbffc8, #ffeea1);
+  color: #777500;
+  box-shadow:
+    inset 1px 1px 3px rgba(0, 85, 119, 0.7),
+    1px 1px 4px rgba(0, 85, 119, 0.5);
   transform: translateY(1px);
+}
+.accordion-toggle.active {
+  background: linear-gradient(145deg, #fbffc8, #ffeea1);
+  color: #636100;
+  box-shadow:
+    inset 1px 1px 3px rgba(0, 85, 119, 0.7),
+    1px 1px 4px rgba(0, 85, 119, 0.5);
 }
 .close-btn {
   display: inline-flex;
@@ -363,12 +394,12 @@ ul,li {
     margin-bottom: 16px;
   }
 }
-/* スマホ表示：2列 */
+
 @media screen and (max-width: 768px) {
-    .grid-container {
+    .grid-container {/* スマホ表示：2列 */
         grid-template-columns: repeat(2, 1fr);
     }
-    .accordion-content {
+    .accordion-content {/* スマホ表示：2列 */
         grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -14,7 +14,16 @@ document.addEventListener("DOMContentLoaded", () => {
         { path: 'json/serial/S xs-love.json', prefix: 'love-', limit: 54, prenamer: '好き' },
         { path: 'json/serial/S xs-series.json', prefix: 'series-', limit: 70, prenamer: 'シリーズ' },
         { path: 'json/serial/S xs-others.json', prefix: 'others-', limit: 47, prenamer: 'その他' },
-    ]);
+    ]).then(() => {
+        // すべて完了したらフェードアウト
+        const loadingScreen = document.getElementById("loading-screen");
+        loadingScreen.classList.add("fade-out");
+        
+        // アニメーション終了後に要素を削除
+        setTimeout(() => {
+            loadingScreen.remove();
+        }, 600); // CSSのtransition時間と合わせる
+    });
 });
 
 // 複数のJSONデータを取得
@@ -81,6 +90,7 @@ function renderAccordion(items) {
         // ヘッダー作成
         const header = document.createElement("button");
         header.className = "accordion-toggle";
+        header.dataset.prefix = prefix;
         header.textContent = groupData.prenamer;
         header.onclick = () => toggleAccordion(prefix);
         headerContainer.appendChild(header);
@@ -94,6 +104,7 @@ function renderAccordion(items) {
         // 閉じるボタン（コンテンツ内）
         const closeBtn = document.createElement("button");
         closeBtn.className = "accordion-toggle close-btn";
+        closeBtn.dataset.prefix = prefix;
         closeBtn.textContent = `${groupData.prenamer}を閉じる`;
         closeBtn.onclick = () => toggleAccordion(prefix);
         content.appendChild(closeBtn);
@@ -122,13 +133,26 @@ function renderAccordion(items) {
 
 // 開閉処理共通化
 function toggleAccordion(prefix) {
-    const content = document.getElementById(`content-${prefix}`);
-    const isOpen = content.style.display === 'grid' || content.style.display === 'block';
-    content.style.display = isOpen ? 'none' : 'grid';
+  const content = document.getElementById(`content-${prefix}`);
+  const toggleBtn = document.querySelector(`.accordion-toggle[data-prefix="${prefix}"]`);
+
+  const isOpen = content.style.display === "block";
+
+   if (isOpen) {
+    // 閉じる
+    content.style.display = "none";
+    toggleBtn.classList.remove("active");
+    if (closeBtn) closeBtn.classList.remove("active");
+  } else {
+    // 開く（他のは閉じない＝複数開き可能）
+    content.style.display = "block";
+    toggleBtn.classList.add("active");
+    if (closeBtn) closeBtn.classList.add("active");
+  }
 }
 
 function groupByPrefix(items) {
-    const grouped = {};
+    const grouped = {}; 
     items.forEach(item => {
         if (!grouped[item.prefix]) grouped[item.prefix] = {
                 prenamer: item.prenamer,
@@ -227,8 +251,10 @@ document.getElementById("search-button").addEventListener("click", function () {
     const tagText = card.dataset.tag?.toLowerCase() || "";
     const idText = card.dataset.id?.toLowerCase() || "";
 
-    const tags = tagText.split(/\s+/);
-    const isMatch = tags.some(tag => searchTerm.includes(tag)) || idText.includes(searchTerm);
+    const tags = tagText.split(/\s+/).filter(Boolean); // 空文字除外
+
+    const isMatch = tags.some(tag => tag.includes(searchTerm)) || idText.includes(searchTerm);
+
 
     if (isMatch) {
       // 複製してsearchResultsに追加（元の場所から移動しないよう cloneNode）
