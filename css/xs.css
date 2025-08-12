@@ -117,66 +117,9 @@ ul,li {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 767px){
-  .grid-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* スマホ横2列 */
-  gap: 1rem;
-  } 
-  .section1 .container{
-      width: 98%;
-  }
-  .section2 .row{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    transform: translateY(-48px);
-    z-index: 2;
-    position: relative;
-  }
-  .section2 .col{
-    width: 46%;
-    color:firebrick;
-    padding: 20px;
-    padding-bottom: 5px;
-    border-radius: 32px;
-    margin-top: 38px;
-  }
-  .section2 img{
-    width: 120px;
-    height: auto;
-    padding: 8px;
-    border: 9px;
-    display: flex;
-    margin: 0 auto;
-    margin-bottom: 16px;
-  }
-  .select-index{
-    width: 96%;
-    margin: 0 auto;
-  }
-  .select-index ul{
-    width: 98%;
-    flex-wrap: wrap;
-    display: flex;
-    margin: 0 auto;
-  }
-  .select-index li{
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 2%;
-    background-color:#ecdfdf;
-    font-weight: bold;
-    width: 30%;
-    padding: 20px;
-    border-radius: 32px;
-    margin-top: 38px;
-  }
-}
 
-.container-hidden{
-  display: none;
-}
+
+
 
 /* 検索バー */
 #searchInput {
@@ -378,9 +321,54 @@ ul,li {
     margin-bottom: 0.5em;
 }
 
+.container-hidden {
+  display: none;
+}
+
+@media screen and (max-width: 767px){
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* スマホ横2列 */
+  gap: 1rem;
+  } 
+  .accordion-content {
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .section1 .container{
+      width: 98%;
+  }
+  .section2 .row{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    transform: translateY(-48px);
+    z-index: 2;
+    position: relative;
+  }
+  .section2 .col{
+    width: 46%;
+    color:firebrick;
+    padding: 20px;
+    padding-bottom: 5px;
+    border-radius: 32px;
+    margin-top: 38px;
+  }
+  .section2 img{
+    width: 120px;
+    height: auto;
+    padding: 8px;
+    border: 9px;
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+}
 /* スマホ表示：2列 */
 @media screen and (max-width: 768px) {
     .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .accordion-content {
         grid-template-columns: repeat(2, 1fr);
     }
 }
