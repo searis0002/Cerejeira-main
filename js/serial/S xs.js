@@ -136,6 +136,8 @@ function toggleAccordion(prefix) {
   const content = document.getElementById(`content-${prefix}`);
   const toggleBtn = document.querySelector(`.accordion-toggle[data-prefix="${prefix}"]`);
 
+  const closeBtn = content.querySelector(".close-btn");
+
   const isOpen = content.style.display === "block";
 
    if (isOpen) {
@@ -145,7 +147,7 @@ function toggleAccordion(prefix) {
     if (closeBtn) closeBtn.classList.remove("active");
   } else {
     // 開く（他のは閉じない＝複数開き可能）
-    content.style.display = "block";
+    content.style.display = "grid";
     toggleBtn.classList.add("active");
     if (closeBtn) closeBtn.classList.add("active");
   }
