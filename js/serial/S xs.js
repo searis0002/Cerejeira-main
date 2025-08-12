@@ -99,7 +99,6 @@ function renderAccordion(items) {
         const content = document.createElement("div");
         content.className = "accordion-content";
         content.id = `content-${prefix}`;
-        content.style.display = 'none';
 
         // 閉じるボタン（コンテンツ内）
         const closeBtn = document.createElement("button");
@@ -135,23 +134,23 @@ function renderAccordion(items) {
 function toggleAccordion(prefix) {
   const content = document.getElementById(`content-${prefix}`);
   const toggleBtn = document.querySelector(`.accordion-toggle[data-prefix="${prefix}"]`);
-
   const closeBtn = content.querySelector(".close-btn");
 
-  const isOpen = content.style.display === "block";
+  const isOpen = content.classList.contains("open");
 
-   if (isOpen) {
+  if (isOpen) {
     // 閉じる
-    content.style.display = "none";
+    content.classList.remove("open");
     toggleBtn.classList.remove("active");
     if (closeBtn) closeBtn.classList.remove("active");
   } else {
-    // 開く（他のは閉じない＝複数開き可能）
-    content.style.display = "grid";
+    // 開く（複数開き可能）
+    content.classList.add("open");
     toggleBtn.classList.add("active");
     if (closeBtn) closeBtn.classList.add("active");
   }
 }
+
 
 function groupByPrefix(items) {
     const grouped = {}; 
