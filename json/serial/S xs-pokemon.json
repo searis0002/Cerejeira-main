@@ -285,5 +285,54 @@
     "namer":"TWIN MOON",
     "sitelink":" ",
     "tag":"ポケモン ミズキ"
+  },
+  { "id":"pokemon-042",  "usertag":"カガリちゃああああああああああ",
+    "img":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20042/1.webp",
+    "html":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20042/index.html",
+    "namer":"カガリちゃああああああああああ",
+    "sitelink":" ",
+    "tag":"ポケモン"
+  },
+  { "id":"pokemon-043",  "usertag":"もう一戦おねがいします♡",
+    "img":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20043/1.webp",
+    "html":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20043/index.html",
+    "namer":"もう一戦おねがいします♡",
+    "sitelink":" ",
+    "tag":"ポケモン"
+  },
+  { "id":"pokemon-044",  "usertag":"ししゅんき!",
+    "img":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20044/1.webp",
+    "html":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20044/index.html",
+    "namer":"ししゅんき!",
+    "sitelink":" ",
+    "tag":"ポケモン"
+  },
+  { "id":"pokemon-045",  "usertag":"ポケ●ン研究者・ソニア 強制催眠キャンプ",
+    "img":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20045/1.webp",
+    "html":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20045/index.html",
+    "namer":"ポケ●ン研究者・ソニア 強制催眠キャンプ",
+    "sitelink":" ",
+    "tag":"ポケモン"
+  },
+  { "id":"pokemon-046",  "usertag":"メイちゃん洗脳大ピンチ",
+    "img":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20046/1.webp",
+    "html":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20046/index.html",
+    "namer":"メイちゃん洗脳大ピンチ",
+    "sitelink":" ",
+    "tag":"ポケモン"
+  },
+  { "id":"pokemon-047",  "usertag":"",
+    "img":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20047/1.webp",
+    "html":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20047/index.html",
+    "namer":"",
+    "sitelink":" ",
+    "tag":"ポケモン"
+  },
+  { "id":"pokemon-048",  "usertag":"",
+    "img":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20048/1.webp",
+    "html":"https://searis0002.github.io/searis-pokemon/manga_slider/pokemon%20048/index.html",
+    "namer":"",
+    "sitelink":" ",
+    "tag":"ポケモン"
   }
 ]
