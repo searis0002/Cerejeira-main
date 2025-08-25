@@ -3,7 +3,7 @@ const allItems = [];
 
 // JSONファイルリスト
 const fileList = [
-    { path: 'json/serial/S xs-fav.json', prefix: 'fav-', limit: 22, prenamer: 'お気に入り' },
+    { path: 'json/serial/S xs-fav.json', prefix: 'fav-', limit: 27, prenamer: 'お気に入り' },
     { path: 'json/serial/S xs-guraburu.json', prefix: 'guraburu-', limit: 29, prenamer: 'グラブル' },
     { path: 'json/serial/S xs-pokemon.json', prefix: 'pokemon-', limit: 52, prenamer: 'ポケモン' },
     { path: 'json/serial/S xs-azuren.json', prefix: 'azuren-', limit: 18, prenamer: 'アズレン' },
@@ -20,7 +20,7 @@ const fileList = [
 
 // カスタム順序設定（範囲は "1-10"、単発は "25" のように記述）
 const customOrders = {
-    'fav-': [" "],
+    'fav-': ["1-9", "12", "25-27", "19-20", "22", "21"],
     'guraburu-': [" "],
     'pokemon-': [" "],
     'azuren-': [" "],
