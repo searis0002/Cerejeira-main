@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>共有入力フォーム</title>
+  <style>
+    textarea {
+      width: 90%;
+      height: 150px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<!--https://docs.google.com/spreadsheets/d/1baziQzMvuZEAg3Jb_6R7FjR3rEMsKEiGM16jNY6FiJQ/edit?usp=sharing-->
+<!--https://script.google.com/macros/s/AKfycbyYIiwNerd8XPLaig_rqfQdvbhf-31cp4Wtpz384KLKBYqOKFqBCjltGfjnc0Oq0zgjwg/exec-->
+
+<body>
+  <h1>共有メモ</h1>
+  <textarea id="sharedMemo" placeholder="ここにメモを書いてください（複数行対応）"></textarea>
+  <br>
+  <button id="saveBtn">保存</button>
+  <p>最新の内容:</p>
+  <pre id="display" style="white-space: pre-wrap; border:1px solid #ccc; padding:5px; width:90%;"></pre>
+
+  <script>
+    const API_URL = "https://script.google.com/macros/s/AKfycbyYIiwNerd8XPLaig_rqfQdvbhf-31cp4Wtpz384KLKBYqOKFqBCjltGfjnc0Oq0zgjwg/exec";
+
+    const textarea = document.getElementById('sharedMemo');
+    const display = document.getElementById('display');
+    const saveBtn = document.getElementById('saveBtn');
+
+    // データを取得して表示（GET）
+    function fetchMemo() {
+      fetch(API_URL)
+        .then(res => res.text())
+        .then(text => {
+          display.textContent = text;
+          // 他の人が更新している場合もあるのでtextareaは上書きしない方が自然
+        });
+    }
+
+    // 初回読み込み
+    fetchMemo();
+
+    // 保存ボタン押下でスプレッドシートに書き込み
+    saveBtn.addEventListener('click', () => {
+      fetch(API_URL, {
+        method: 'POST',
+        body: textarea.value
+      })
+      .then(res => res.text())
+      .then(res => {
+        if(res === "OK") {
+          fetchMemo(); // 保存直後に最新データ取得
+          alert("保存しました！");
+        }
+      });
+    });
+
+    // **リアルタイム自動反映（5秒ごと）**
+    setInterval(fetchMemo, 10000);
+  </script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="description" content="Cerejeira">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/human/ilust/Noyu/icon.webp" id="favicon">
+    <link rel="apple-touch-icon" href="img/Lyney&Lynette/icon/lynette.ico" sizes="180x180" id="favicon">
+    <meta name="robots" content="noindex">
+    <meta name="format-detection" content="email=no,telephone=no,address=no">
+    <script src="js/insert.js" defer></script>
+    <script src="js/serial/S index.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="css/personal.css">
+    <link rel="stylesheet" type="text/css" href="css/change.css">
+    <link rel="stylesheet" type="text/css" href="css/load rock.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* 検索バー */
+        #searchInput {
+            width: 90%;
+            max-width: 500px;
+            font-size: 1em;
+            padding: 0.5em 1em;
+            margin: 1em auto;
+            display: block;
+            border: 2px solid firebrick;
+            border-radius: 8px;
+            background-color: #fff8f6;
+            color: firebrick;
+            font-family: 'Courier New', Courier, monospace, 'Zen Kaku Gothic New', sans-serif;
+        }
+        #search-input {
+            width: 90%;
+            max-width: 500px;
+            font-size: 1em;
+            padding: 0.5em 1em;
+            margin: 1em auto;
+            display: block;
+            border: 2px solid firebrick;
+            border-radius: 8px;
+            background-color: #fff8f6;
+            color: firebrick;
+            font-family: 'Courier New', Courier, monospace, 'Zen Kaku Gothic New', sans-serif;
+        }
+        #searchBox {
+            width: 90%;
+            max-width: 500px;
+            font-size: 1em;
+            padding: 0.5em 1em;
+            margin: 1em auto;
+            display: block;
+            border: 2px solid firebrick;
+            border-radius: 8px;
+            background-color: #fff8f6;
+            color: firebrick;
+            font-family: 'Courier New', Courier, monospace, 'Zen Kaku Gothic New', sans-serif;
+        }
+        .search ul {
+        width: 100%;
+        display: flex;justify-content: flex-end; 
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding-right: 40px;
+        }
+        .search ul li {
+        text-align: center;
+        padding: 20px 0;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        }
+    </style>
+</head>
+
+<body id="BGcolor">
+  <div id="lock-screen">
+    <h2>パスワードを入力してください</h2>
+    <input type="password" id="password" placeholder="パスワードを入力">
+    <button onclick="checkPassword()">認証</button>
+  </div>
+  <div id="protected-content" style="display: none;"></div>
+  <div id="content">
+
+  <header id="header"></header>
+
+  <main>
+    <section class="section1"><!--top page-->
+        <img src="img/human/ilust/pottsness/015.webp" alt="top" id="image">
+        <!--img/Cerejeira/Cerejeira.webp-->
+        <!--img/human/ilust/pottsness/015.webp-->
+        <!--img/Lyney&Lynette/Lyney&Lynette 002.webp-->
+        
+        <div class="container">
+            <p class="heading">Personal site</p>
+            <h1>Ehlaroohe<br>～✿StoriA✿～</h1>
+            <br>
+            <br>
+            <div class="search" id="search-container">
+                <input type="text" id="pageinput" placeholder="予定を入力" enterkeyhint="go">
+                <button onclick="searchpage()">実行</button>
+                <button onclick="resetbutton()">リセット</button>
+            </div>
+        </div>
+    </section>
+            <!--Github link  https://github.com/searis02/searis02 -->
+            <!--Github link  https://github.com/searis0002/Cerejeira-main -->
+            
+            <section class="section2">
+                <div class="container">
+                    <h1></h1>
+                    <div class="row">
+                        <div class="col" id="001"><!--1 雑学・知識にしたい--></div>
+                        <div class="col" id="002"></div>
+                        <div class="col" id="003"></div>
+                        <div class="col" id="004"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+            <div id="footer"></div>
+        </footer>
+            
+        <script src="js/password.js" defer></script>
+        <script src="js/search_page.js" defer></script>
+        <script src="js/img size checker.js" defer></script>
+        <script src="js/change.js"></script>
+        <script src="js/jquery-3.7.1.min.js"></script>
+        <script src="js/jquery-write.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+            
+        <p id="page-top"><a href="#">TOP</a></p>
+    </div>
+</body>
+</html>

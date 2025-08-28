@@ -1,0 +1,99 @@
+[
+  { "id": "anime-001", "title": "ワールドトリガー",
+    "year": 2014,
+    "genre": ["SF", "アクション"],
+    "img": "img/IP/worldtrigger/top.webp",
+    "theme": "worldtrigger-theme",
+    "link": "https://worldtrigger.info/",
+    "customVisible": false,
+    "custom": [
+      {"type": "accordion",
+        "title": "用語集",
+        "items": [
+          { "term": "トリガー", "desc": "ボーダー隊員が使用する武器システム。" },
+          { "term": "近界民", "desc": "異世界からの侵略者。" }
+        ]
+      },
+      {"type": "character-list",
+        "title": "主要キャラクター",
+        "items": [
+          { "name": "空閑遊真", "img": "https://via.placeholder.com/100?text=Yuma" },
+          { "name": "三雲修", "img": "img/IP/worldtrigger/chara/mikumo_osamu/main.webp" }
+        ]
+      }
+    ]
+  },
+  { "id": "anime-002", "title": "ポケモン",
+    "year": 1996,
+    "genre": ["バトル", "ダークファンタジー"],
+    "img": "img/IP/pokemon/top.webp",
+    "theme": "pokemon-theme",
+    "link": "https://www.pokemon.co.jp/",
+    "customVisible": false,
+    "custom": [
+      {
+        "type": "links",
+        "title": "関連リンク",
+        "links": [
+          { "label": "公式サイト", "url": "https://example.com/pokemon" },
+          { "label": "Wiki", "url": "https://example.com/wiki/pokemon" }
+        ]
+      }
+    ]
+  },
+  { "id": "anime-003", "title": "86 エイティシックス",
+    "year": 2020,
+    "genre": ["バトル", "ダークファンタジー"],
+    "img": "img/IP/86-eighty-six/top.webp",
+    "theme": "jujutsu-theme",
+    "link": "https://example.com/jujutsu",
+    "customVisible": false,
+    "custom": [
+      {
+        "type": "links",
+        "title": "関連リンク",
+        "links": [
+          { "label": "公式サイト", "url": "https://example.com/jujutsu" },
+          { "label": "Wiki", "url": "https://example.com/wiki/jujutsu" }
+        ]
+      }
+    ]
+  },
+  { "id": "anime-004", "title": "呪術廻戦",
+    "year": 2020,
+    "genre": ["バトル", "ダークファンタジー"],
+    "img": "https://via.placeholder.com/200x300?text=Jujutsu",
+    "theme": "jujutsu-theme",
+    "link": "https://example.com/jujutsu",
+    "customVisible": false,
+    "custom": [
+      {
+        "type": "links",
+        "title": "関連リンク",
+        "links": [
+          { "label": "公式サイト", "url": "https://example.com/jujutsu" },
+          { "label": "Wiki", "url": "https://example.com/wiki/jujutsu" }
+        ]
+      }
+    ]
+  },
+  { "id": "anime-005", "title": "鬼滅の刃",
+    "year": 2019,
+    "genre": ["和風", "バトル"],
+    "img": "img/anime/kimetsu.jpg",
+    "theme": "kimetsu-theme",
+    "link": "https://example.com/kimetsu",
+    "customVisible": false,
+    "custom": [
+        {
+        "type": "character-list",
+        "title": "呼吸法",
+        "items": [
+            { "name": "水の呼吸", "img": "img/breath/water.webp" },
+            { "name": "炎の呼吸", "img": "img/breath/fire.webp" }
+        ]
+        }
+    ]
+}
+
+]
