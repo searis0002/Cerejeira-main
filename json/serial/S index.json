@@ -3,7 +3,7 @@
      "img": "img/syougasan.webp",
      "html": "human.html",
      "namer": "note",
-     "textin": "human"
+     "textin": "unknown"
     },
     {"id": "002","nametag": "human",
      "img": "img/human/ilust/pottsness/icon.webp",
@@ -11,22 +11,40 @@
      "namer": "note",
      "textin": "human"
     },
-    {"id": "003","nametag": "skill (Substance)",
-     "img": "img/icon/Substance.webp",
-     "html": "Substance.html",
+    {"id": "003","nametag": "娯楽",
+     "img": "img/syougasan.webp",
+     "html": "entertainment.html",
      "namer": "note",
-     "textin": "skill"
+     "textin": "娯楽"
     },
-    {"id": "004","nametag": "sound",
+    {"id": "004","nametag": "anime",
+     "img": "img/game/genshin/chara/water/Furina/icon 2.webp",
+     "html": "anime.html",
+     "namer": "note",
+     "textin": "anime"
+    },
+    {"id": "005","nametag": "sound",
      "img": "img/syougasan.webp",
      "html": "sound.html",
      "namer": "note",
      "textin": "sound"
     },
-    {"id": "005","nametag": "娯楽",
+    {"id": "006","nametag": "お店",
      "img": "img/syougasan.webp",
-     "html": "entertainment.html",
+     "html": "shop.html",
      "namer": "note",
-     "textin": "娯楽"
+     "textin": "お店"
+    },
+    {"id": "007","nametag": "skill (Substance)",
+     "img": "img/icon/Substance.webp",
+     "html": "Substance.html",
+     "namer": "note",
+     "textin": "skill"
+    },
+    {"id": "008","nametag": "IKEA",
+     "img": "img/shop/icon/IKEA.webp",
+     "html": "IKEA.html",
+     "namer": "note",
+     "textin": "IKEA"
     }
 ]
