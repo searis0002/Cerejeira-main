@@ -1,0 +1,99 @@
+
+[
+  { "id": "food-001","title": "クリスピークリームドーナツ",
+    "img": "img/IP/worldtrigger/top.webp",
+    "theme": "Kryspy-donuts-theme",
+    "link": "https://krispykreme.jp/",
+    "genre": ["ドーナツ", "カフェ"],
+    "customVisible": true,
+    "categories": {
+      "ramen": {
+        "label": "ラーメン",
+        "items": [
+          { "id": 1, "name": "醤油ラーメン", "img": "img/ramen1.jpg" },
+          { "id": 2, "name": "味噌ラーメン", "img": "img/ramen2.jpg" }
+        ]
+      },
+      "drink": {
+        "label": "ドリンク",
+        "items": [
+          { "id": 3, "name": "コーラ", "img": "img/drink1.jpg" },
+          { "id": 4, "name": "ウーロン茶", "img": "img/drink2.jpg" }
+        ]
+      },
+      "dessert": {
+        "label": "デザート",
+        "items": [
+          { "id": 5, "name": "杏仁豆腐", "img": "img/dessert1.jpg" },
+          { "id": 6, "name": "プリン", "img": "img/dessert2.jpg" }
+        ]
+      }
+    },
+    "custom": [
+      {
+        "type": "accordion",
+        "title": "用語集",
+        "items": [
+          { "term": "トリガー", "desc": "ボーダー隊員が使用する武器システム。" },
+          { "term": "近界民", "desc": "異世界からの侵略者。" }
+        ]
+      },
+      {
+        "type": "character-list",
+        "title": "主要キャラクター",
+        "items": [
+          { "name": "空閑遊真", "img": "https://via.placeholder.com/100?text=Yuma" },
+          { "name": "三雲修", "img": "img/IP/worldtrigger/chara/mikumo_osamu/main.webp" }
+        ]
+      }
+    ]
+  },
+  { "id": "food-002","title": "スターバックスコーヒー",
+    "img": "img/IP/worldtrigger/top.webp",
+    "theme": "Kryspy-donuts-theme",
+    "link": "https://krispykreme.jp/",
+    "genre": ["ドーナツ", "カフェ"],
+    "customVisible": true,
+    "categories": {
+      "ramen": {
+        "label": "ラーメン",
+        "items": [
+          { "id": 1, "name": "醤油ラーメン", "img": "img/ramen1.jpg" },
+          { "id": 2, "name": "味噌ラーメン", "img": "img/ramen2.jpg" }
+        ]
+      },
+      "drink": {
+        "label": "ドリンク",
+        "items": [
+          { "id": 3, "name": "コーラ", "img": "img/drink1.jpg" },
+          { "id": 4, "name": "ウーロン茶", "img": "img/drink2.jpg" }
+        ]
+      },
+      "dessert": {
+        "label": "デザート",
+        "items": [
+          { "id": 5, "name": "杏仁豆腐", "img": "img/dessert1.jpg" },
+          { "id": 6, "name": "プリン", "img": "img/dessert2.jpg" }
+        ]
+      }
+    },
+    "custom": [
+      {
+        "type": "accordion",
+        "title": "用語集",
+        "items": [
+          { "term": "トリガー", "desc": "ボーダー隊員が使用する武器システム。" },
+          { "term": "近界民", "desc": "異世界からの侵略者。" }
+        ]
+      },
+      {
+        "type": "character-list",
+        "title": "主要キャラクター",
+        "items": [
+          { "name": "空閑遊真", "img": "https://via.placeholder.com/100?text=Yuma" },
+          { "name": "三雲修", "img": "img/IP/worldtrigger/chara/mikumo_osamu/main.webp" }
+        ]
+      }
+    ]
+  }
+]
